@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gianna Hostels</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<script src="booking.js"></script>
+
+
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"style="width: 100px; height: 100px;"></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#aboutus">ABOUT US</a></li>
+                    <li><a href="#rooms">HOSTELS/ROOMS</a></li>
+                    <li><a href="#bookroom">BOOK A ROOM</a></li>
+                    <li><a href="#footer">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
+ 
+        </nav>
+<div class="text-box">
+    <h1>Welcome To Gianna Hostel Living</h1>
+    <p> Explore available rooms, 
+    compare prices, and book your spot.
+</p>
+<a href="" class="about-btn">Visit Us To Know More</a>
+</div>
+    </section>
+
+<!-- about us section -->
+<section class="aboutus" id="aboutus">
+    <div class="background-overlay">
+    <h1>About Us</h1>
+    <p>At Gianna Hostels, we pride ourselves on providing students with <br>
+         a comfortable, secure, and affordable living experience</p>
+
+         <div class="row">
+            <div class="aboutus-col">
+                <h3>Locations</h3>
+                <p>We are conveniently located in two of Kenya's major cities:<br>
+
+                    <b>Nairobi:</b> our Nairobi location offers easy access to<br> 
+                    public transport and is in close proximity to CBD.<br>
+                    <b>Mombasa:</b> Located close to major educational institutions,<br>
+                    our Mombasa facility boasts serene surroundings and a tropical vibe.</p>
+
+            </div>
+
+            <div class="aboutus-col">
+                <h3>Rooms</h3>
+                    <h4>single room</h4>
+                    <p>for students who value privacy</p>
+                    <h4>shared room</h4>
+                    <p>Affordable and ideal for those who enjoy the company of roommates.</p>
+                    <h4>premium room</h4>
+                    <p>Larger rooms with added amenities</p>
+
+            </div>
+
+            <div class="aboutus-col">
+                <h3>Amenities</h3>
+                <ul>
+                    <li>24/7 Security</li>
+                    <li>High-Speed Wi-Fi</li>
+                    <li>Study Areas</li>
+                    <li>Fully Equipped Kitchen</li>
+                    <li>Laundry Facilities</li>
+                    <li>Gym</li>
+                </ul>
+
+            </div>
+         </div>
+
+</div>
+</section>
+
+<!-- rooms -->
+<section class="rooms" id="rooms">
+    <h1>Rooms available</h1>
+    <p>We offer a variety of rooms to suit your needs—single, shared, and premium options available.</p>
+    <div class="row">
+        <div class="room-col">
+            <img src="images/single.jpeg">
+            <div class="layer">
+                <h3>Single room</h3>
+            </div>
+        </div><div class="room-col">
+            <img src="images/shared.jpeg">
+            <div class="layer">
+                <h3>shared room</h3>
+            </div>
+        </div>
+        <div class="room-col">
+            <img src="images/premium.jpeg">
+            <div class="layer">
+                <h3>premium room</h3>
+            </div>
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- amenities -->
+<section class="amenities">
+    <h1>Our Amenities</h1>
+    <p>We provide top-notch facilities to ensure a comfortable and convenient stay,<br>
+       including 24/7 security, high-speed Wi-Fi, study areas, and more.</p>
+       <div class="row">
+        <div class="amenities-col">
+            <img src="images/study.jpeg">
+            <h3>Study Area</h3>
+            <p>Our quiet and spacious study areas are designed to help you focus and be productive.</p>
+        </div>
+        <div class="amenities-col">
+            <img src="images/kitchen.jpeg">
+            <h3>Shared Kitchen</h3>
+            <p>Our fully equipped shared kitchen allows residents to prepare their meals with ease.
+                With modern appliances, ample counter space, and a clean environment.</p>
+        </div>
+        <div class="amenities-col">
+            <img src="images/gym.jpeg">
+            <h3>Gym</h3>
+            <p>Stay fit and active in our fully equipped gym.</p>
+        </div>
+       </div>
+</section>
+
+<!-- book a room -->
+<section class="bookroom" id="bookroom">
+    <h1>Book A Room</h1>
+    <p>Find a plan for you</p>
+    <a href="javascript:void(0)" onclick="showModal()" class="about-btn">Make a Booking</a>
+    
+    
+</section>
+
+<!-- footer -->
+<section class="footer" id="footer">
+    <h4>About Us</h4>
+    <p>Providing comfort, security, and affordability for every student.</p>
+    <div class="icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fas fa-envelope"></i>
+
+    </div>
+</section>
+
+<!-- Popup Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Book a Room</h2>
+        <form id="bookingForm">
+            <label for="roomType">Select Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="single">Single Room</option>
+                <option value="shared">Shared Room</option>
+                <option value="premium">Premium Room</option>
+            </select>
+            <br><br>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <br><br>
+            <button type="button" onclick="bookRoom()">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+
+
+ <!-- javascript for menu bar on mobile -->
+
+    <script>
+        var navlinks = document.getElementById("navlinks");
+        
+        function showmenu() {
+            navlinks.style.right = "0";
+            
+        }
+        function hidemenu() {
+            navlinks.style.right = "-200px";
+            
+        }
+    </script>
+</body>
+</html>
